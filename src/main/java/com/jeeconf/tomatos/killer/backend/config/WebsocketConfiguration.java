@@ -1,4 +1,4 @@
-package by.jfuture.tomatos.killer.backend.config;
+package com.jeeconf.tomatos.killer.backend.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

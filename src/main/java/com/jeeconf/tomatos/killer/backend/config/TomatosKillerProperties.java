@@ -1,4 +1,4 @@
-package by.jfuture.tomatos.killer.backend.config;
+package com.jeeconf.tomatos.killer.backend.config;
 
 import lombok.Getter;
 import lombok.Setter;

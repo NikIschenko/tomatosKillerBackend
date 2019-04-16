@@ -12,14 +12,19 @@ buildscript {
 	}
 }
 
+plugins {
+	id "lenala.azure.azurewebapp" version "1.0"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'by.jfuture'
+
+group = 'com.jeeconf'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = JavaVersion.VERSION_1_10
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
 	mavenCentral()
@@ -27,6 +32,22 @@ repositories {
 	maven { url "https://repo.spring.io/milestone" }
 }
 
+azureWebApp {
+	resourceGroup = "tomatos-killer"
+	appName = "tomatos-killer"
+	pricingTier = "S1"
+	appService = {
+		type = 'windows'
+		javaVersion = '1.8.0_25'
+	}
+	authentication = {
+		type = "file"
+		file = file('C:/work/tomatosKiller/key.azureauth')
+	}
+	deployment = {
+		type = "jar"
+	}
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')

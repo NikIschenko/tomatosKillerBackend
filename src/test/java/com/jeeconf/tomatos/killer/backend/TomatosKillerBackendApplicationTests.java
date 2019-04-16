@@ -1,4 +1,4 @@
-package by.jfuture.tomatos.killer.backend;
+package com.jeeconf.tomatos.killer.backend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
